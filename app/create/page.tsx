@@ -1,14 +1,14 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation'
-import { motion } from 'framer-motion'
-import { ArrowLeft, Users, Copy, Check } from 'lucide-react'
-import { useMutation } from 'convex/react'
+import { RoomCode } from '@/components/RoomCode'
 import { api } from '@/convex/_generated/api'
 import { Button } from '@/lib/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/lib/ui/card'
-import { RoomCode } from '@/components/RoomCode'
+import { useMutation } from 'convex/react'
+import { motion } from 'framer-motion'
+import { ArrowLeft, Users } from 'lucide-react'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { useEffect, useState } from 'react'
 
 export default function CreateRoomPage() {
   const router = useRouter()
@@ -125,7 +125,7 @@ export default function CreateRoomPage() {
 
         {/* Success Card */}
         <Card className="shadow-xl">
-          <CardHeader className="text-center">
+          <CardHeader className="text-center items-center">
             <motion.div
               className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4"
               initial={{ scale: 0 }}
@@ -166,8 +166,9 @@ export default function CreateRoomPage() {
             {/* Action Button */}
             <Button
               onClick={handleGoToRoom}
-              className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700"
-              size="lg"
+              variant="gradient"
+              className="w-full flex items-center justify-center gap-3"
+              size="xl"
             >
               <Users className="w-5 h-5" />
               <span>Go to Room</span>

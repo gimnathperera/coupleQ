@@ -124,7 +124,7 @@ export function ReadyPanel({
           onClick={onToggleReady}
           disabled={disabled}
           variant={isReady ? 'default' : 'outline'}
-          className="w-full flex items-center justify-center space-x-2"
+          className="w-full flex items-center justify-center gap-3"
           size="lg"
         >
           {isReady ? (
@@ -151,7 +151,8 @@ export function ReadyPanel({
           <Button
             onClick={onStartGame}
             disabled={disabled}
-            className="w-full flex items-center justify-center space-x-2 bg-green-600 hover:bg-green-700"
+            variant="gradient"
+            className="w-full flex items-center justify-center gap-3"
             size="lg"
           >
             <Play className="w-5 h-5" />

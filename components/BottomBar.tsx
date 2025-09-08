@@ -41,7 +41,9 @@ export function BottomBar({
           <Button
             onClick={onLockAnswer}
             disabled={disabled}
-            className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-lg font-semibold"
+            variant="gradient"
+            size="lg"
+            className="px-8"
           >
             Lock Answer
           </Button>
@@ -51,7 +53,9 @@ export function BottomBar({
           <Button
             onClick={onReveal}
             disabled={disabled}
-            className="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold"
+            variant="gradient"
+            size="lg"
+            className="px-8"
           >
             Reveal Answers
           </Button>
@@ -61,7 +65,9 @@ export function BottomBar({
           <Button
             onClick={onNextRound}
             disabled={disabled}
-            className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold"
+            variant="gradient"
+            size="lg"
+            className="px-8"
           >
             Next Round
           </Button>

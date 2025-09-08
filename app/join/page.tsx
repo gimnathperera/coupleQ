@@ -170,8 +170,9 @@ export default function JoinRoomPage() {
             <Button
               onClick={handleJoinRoom}
               disabled={!roomCode.trim() || roomCode.length !== 6 || isJoining}
-              className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
-              size="lg"
+              variant="gradient"
+              className="w-full flex items-center justify-center gap-3"
+              size="xl"
             >
               {isJoining ? (
                 <>

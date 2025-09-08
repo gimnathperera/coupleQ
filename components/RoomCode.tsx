@@ -39,7 +39,7 @@ export function RoomCode({ code, className = '' }: RoomCodeProps) {
         variant="outline"
         size="sm"
         onClick={handleCopy}
-        className="flex items-center space-x-1"
+        className="flex items-center space-x-1 p-1 rounded-sm"
       >
         {copied ? (
           <>

@@ -111,12 +111,13 @@ export default function LandingPage() {
             <AvatarPicker selectedAvatar={avatar} onSelectAvatar={setAvatar} />
 
             {/* Action Buttons */}
-            <div className="space-y-3">
+            <div className="space-y-4">
               <Button
                 onClick={handleCreateRoom}
                 disabled={!name.trim() || isCreating}
-                className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700"
-                size="lg"
+                variant="gradient"
+                className="w-full flex items-center justify-center gap-3"
+                size="xl"
               >
                 {isCreating ? (
                   <>
@@ -135,8 +136,8 @@ export default function LandingPage() {
                 onClick={handleJoinRoom}
                 disabled={!name.trim() || isJoining}
                 variant="outline"
-                className="w-full flex items-center justify-center space-x-2"
-                size="lg"
+                className="w-full flex items-center justify-center gap-3"
+                size="xl"
               >
                 <ArrowRight className="w-5 h-5" />
                 <span>Join Room</span>
