@@ -205,9 +205,7 @@ export default function GameRoomPage() {
         try {
           const result = await nextRound({ roomId: room._id as Id<'rooms'> })
 
-          if (result.status === 'finished') {
-            router.push(`/r/${code}/results`)
-          }
+          // Game finished - the room status will change to 'finished' and the results will show automatically
         } catch (error) {
           console.error('Auto-advance failed:', error)
         }
@@ -294,9 +292,7 @@ export default function GameRoomPage() {
     try {
       const result = await nextRound({ roomId: room._id as Id<'rooms'> })
 
-      if (result.status === 'finished') {
-        router.push(`/r/${code}/results`)
-      }
+      // Game finished - the room status will change to 'finished' and the results will show automatically
     } catch (error) {
       console.error('Failed to advance to next round:', error)
     }
