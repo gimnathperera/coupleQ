@@ -1,0 +1,642 @@
+[
+  {
+    "id": "q01",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "Where would they rather go this weekend?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Beach",
+        "image": "/decks/soft-sweet-visual/beach.svg",
+        "alt": "Sunny beach with waves"
+      },
+      {
+        "id": "opt2",
+        "label": "Mountains",
+        "image": "/decks/soft-sweet-visual/mountains.svg",
+        "alt": "Green mountains and forest"
+      },
+      {
+        "id": "opt3",
+        "label": "City walk",
+        "image": "/decks/soft-sweet-visual/city.svg",
+        "alt": "Busy city street"
+      },
+      {
+        "id": "opt4",
+        "label": "Stay home",
+        "image": "/decks/soft-sweet-visual/home.svg",
+        "alt": "Cozy home interior"
+      }
+    ]
+  },
+  {
+    "id": "q02",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "What's their ideal date night?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Movie night",
+        "image": "/decks/soft-sweet-visual/movie.svg",
+        "alt": "Cinema with popcorn"
+      },
+      {
+        "id": "opt2",
+        "label": "Dinner out",
+        "image": "/decks/soft-sweet-visual/restaurant.svg",
+        "alt": "Romantic restaurant"
+      },
+      {
+        "id": "opt3",
+        "label": "Concert",
+        "image": "/decks/soft-sweet-visual/concert.svg",
+        "alt": "Live music venue"
+      },
+      {
+        "id": "opt4",
+        "label": "Game night",
+        "image": "/decks/soft-sweet-visual/games.svg",
+        "alt": "Board games and snacks"
+      }
+    ]
+  },
+  {
+    "id": "q03",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "What's their favorite comfort food?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Pizza",
+        "image": "/decks/soft-sweet-visual/pizza.svg",
+        "alt": "Delicious pizza slice"
+      },
+      {
+        "id": "opt2",
+        "label": "Ice cream",
+        "image": "/decks/soft-sweet-visual/icecream.svg",
+        "alt": "Colorful ice cream"
+      },
+      {
+        "id": "opt3",
+        "label": "Pasta",
+        "image": "/decks/soft-sweet-visual/pasta.svg",
+        "alt": "Creamy pasta dish"
+      },
+      {
+        "id": "opt4",
+        "label": "Chocolate",
+        "image": "/decks/soft-sweet-visual/chocolate.svg",
+        "alt": "Rich chocolate dessert"
+      }
+    ]
+  },
+  {
+    "id": "q04",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "How do they prefer to relax?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Reading",
+        "image": "/decks/soft-sweet-visual/reading.svg",
+        "alt": "Person reading a book"
+      },
+      {
+        "id": "opt2",
+        "label": "Yoga",
+        "image": "/decks/soft-sweet-visual/yoga.svg",
+        "alt": "Peaceful yoga pose"
+      },
+      {
+        "id": "opt3",
+        "label": "Music",
+        "image": "/decks/soft-sweet-visual/music.svg",
+        "alt": "Headphones and music"
+      },
+      {
+        "id": "opt4",
+        "label": "Nature walk",
+        "image": "/decks/soft-sweet-visual/nature.svg",
+        "alt": "Walking in nature"
+      }
+    ]
+  },
+  {
+    "id": "q05",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "What's their dream vacation?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Tropical island",
+        "image": "/decks/soft-sweet-visual/island.svg",
+        "alt": "Tropical paradise"
+      },
+      {
+        "id": "opt2",
+        "label": "European city",
+        "image": "/decks/soft-sweet-visual/europe.svg",
+        "alt": "Historic European architecture"
+      },
+      {
+        "id": "opt3",
+        "label": "Adventure trip",
+        "image": "/decks/soft-sweet-visual/adventure.svg",
+        "alt": "Mountain hiking adventure"
+      },
+      {
+        "id": "opt4",
+        "label": "Cultural tour",
+        "image": "/decks/soft-sweet-visual/culture.svg",
+        "alt": "Museum and cultural sites"
+      }
+    ]
+  },
+  {
+    "id": "q06",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "What's their ideal morning routine?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Sleep in",
+        "image": "/decks/soft-sweet-visual/sleep.svg",
+        "alt": "Cozy bed and blankets"
+      },
+      {
+        "id": "opt2",
+        "label": "Coffee & news",
+        "image": "/decks/soft-sweet-visual/coffee.svg",
+        "alt": "Fresh coffee and newspaper"
+      },
+      {
+        "id": "opt3",
+        "label": "Exercise",
+        "image": "/decks/soft-sweet-visual/exercise.svg",
+        "alt": "Morning workout"
+      },
+      {
+        "id": "opt4",
+        "label": "Meditation",
+        "image": "/decks/soft-sweet-visual/meditation.svg",
+        "alt": "Peaceful meditation"
+      }
+    ]
+  },
+  {
+    "id": "q07",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "What's their favorite season?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Spring",
+        "image": "/decks/soft-sweet-visual/spring.svg",
+        "alt": "Blooming flowers and green leaves"
+      },
+      {
+        "id": "opt2",
+        "label": "Summer",
+        "image": "/decks/soft-sweet-visual/summer.svg",
+        "alt": "Bright sunshine and blue sky"
+      },
+      {
+        "id": "opt3",
+        "label": "Fall",
+        "image": "/decks/soft-sweet-visual/fall.svg",
+        "alt": "Colorful autumn leaves"
+      },
+      {
+        "id": "opt4",
+        "label": "Winter",
+        "image": "/decks/soft-sweet-visual/winter.svg",
+        "alt": "Snow-covered landscape"
+      }
+    ]
+  },
+  {
+    "id": "q08",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "What's their ideal pet?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Dog",
+        "image": "/decks/soft-sweet-visual/dog.svg",
+        "alt": "Happy golden retriever"
+      },
+      {
+        "id": "opt2",
+        "label": "Cat",
+        "image": "/decks/soft-sweet-visual/cat.svg",
+        "alt": "Cute orange tabby cat"
+      },
+      {
+        "id": "opt3",
+        "label": "Bird",
+        "image": "/decks/soft-sweet-visual/bird.svg",
+        "alt": "Colorful parrot"
+      },
+      {
+        "id": "opt4",
+        "label": "Fish",
+        "image": "/decks/soft-sweet-visual/fish.svg",
+        "alt": "Tropical fish in aquarium"
+      }
+    ]
+  },
+  {
+    "id": "q09",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "What's their favorite type of movie?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Comedy",
+        "image": "/decks/soft-sweet-visual/comedy.svg",
+        "alt": "Laughing audience"
+      },
+      {
+        "id": "opt2",
+        "label": "Romance",
+        "image": "/decks/soft-sweet-visual/romance.svg",
+        "alt": "Romantic couple scene"
+      },
+      {
+        "id": "opt3",
+        "label": "Action",
+        "image": "/decks/soft-sweet-visual/action.svg",
+        "alt": "Explosive action sequence"
+      },
+      {
+        "id": "opt4",
+        "label": "Horror",
+        "image": "/decks/soft-sweet-visual/horror.svg",
+        "alt": "Spooky dark scene"
+      }
+    ]
+  },
+  {
+    "id": "q10",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "What's their ideal home style?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Modern",
+        "image": "/decks/soft-sweet-visual/modern.svg",
+        "alt": "Sleek modern interior"
+      },
+      {
+        "id": "opt2",
+        "label": "Cozy",
+        "image": "/decks/soft-sweet-visual/cozy.svg",
+        "alt": "Warm cozy living room"
+      },
+      {
+        "id": "opt3",
+        "label": "Minimalist",
+        "image": "/decks/soft-sweet-visual/minimalist.svg",
+        "alt": "Clean minimalist space"
+      },
+      {
+        "id": "opt4",
+        "label": "Vintage",
+        "image": "/decks/soft-sweet-visual/vintage.svg",
+        "alt": "Classic vintage furniture"
+      }
+    ]
+  },
+  {
+    "id": "q11",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "What's their favorite way to celebrate?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Party",
+        "image": "/decks/soft-sweet-visual/party.svg",
+        "alt": "Fun party with friends"
+      },
+      {
+        "id": "opt2",
+        "label": "Quiet dinner",
+        "image": "/decks/soft-sweet-visual/dinner.svg",
+        "alt": "Intimate dinner setting"
+      },
+      {
+        "id": "opt3",
+        "label": "Adventure",
+        "image": "/decks/soft-sweet-visual/adventure2.svg",
+        "alt": "Exciting outdoor activity"
+      },
+      {
+        "id": "opt4",
+        "label": "Gift exchange",
+        "image": "/decks/soft-sweet-visual/gifts.svg",
+        "alt": "Beautiful wrapped presents"
+      }
+    ]
+  },
+  {
+    "id": "q12",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "What's their ideal weekend activity?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Brunch",
+        "image": "/decks/soft-sweet-visual/brunch.svg",
+        "alt": "Delicious brunch spread"
+      },
+      {
+        "id": "opt2",
+        "label": "Shopping",
+        "image": "/decks/soft-sweet-visual/shopping.svg",
+        "alt": "Boutique shopping"
+      },
+      {
+        "id": "opt3",
+        "label": "Sports",
+        "image": "/decks/soft-sweet-visual/sports.svg",
+        "alt": "Playing sports"
+      },
+      {
+        "id": "opt4",
+        "label": "Art gallery",
+        "image": "/decks/soft-sweet-visual/art.svg",
+        "alt": "Beautiful art exhibition"
+      }
+    ]
+  },
+  {
+    "id": "q13",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "What's their favorite type of music?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Pop",
+        "image": "/decks/soft-sweet-visual/pop.svg",
+        "alt": "Pop music concert"
+      },
+      {
+        "id": "opt2",
+        "label": "Jazz",
+        "image": "/decks/soft-sweet-visual/jazz.svg",
+        "alt": "Jazz club performance"
+      },
+      {
+        "id": "opt3",
+        "label": "Rock",
+        "image": "/decks/soft-sweet-visual/rock.svg",
+        "alt": "Rock band on stage"
+      },
+      {
+        "id": "opt4",
+        "label": "Classical",
+        "image": "/decks/soft-sweet-visual/classical.svg",
+        "alt": "Orchestra performance"
+      }
+    ]
+  },
+  {
+    "id": "q14",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "What's their ideal date activity?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Picnic",
+        "image": "/decks/soft-sweet-visual/picnic.svg",
+        "alt": "Romantic picnic setup"
+      },
+      {
+        "id": "opt2",
+        "label": "Museum",
+        "image": "/decks/soft-sweet-visual/museum.svg",
+        "alt": "Art museum visit"
+      },
+      {
+        "id": "opt3",
+        "label": "Beach",
+        "image": "/decks/soft-sweet-visual/beach2.svg",
+        "alt": "Sunset at the beach"
+      },
+      {
+        "id": "opt4",
+        "label": "Cooking",
+        "image": "/decks/soft-sweet-visual/cooking.svg",
+        "alt": "Cooking together"
+      }
+    ]
+  },
+  {
+    "id": "q15",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "What's their favorite way to unwind?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Bath",
+        "image": "/decks/soft-sweet-visual/bath.svg",
+        "alt": "Relaxing bubble bath"
+      },
+      {
+        "id": "opt2",
+        "label": "Massage",
+        "image": "/decks/soft-sweet-visual/massage.svg",
+        "alt": "Spa massage"
+      },
+      {
+        "id": "opt3",
+        "label": "Tea",
+        "image": "/decks/soft-sweet-visual/tea.svg",
+        "alt": "Warm cup of tea"
+      },
+      {
+        "id": "opt4",
+        "label": "Stargazing",
+        "image": "/decks/soft-sweet-visual/stars.svg",
+        "alt": "Beautiful starry night"
+      }
+    ]
+  },
+  {
+    "id": "q16",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "What's their ideal gift to receive?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Flowers",
+        "image": "/decks/soft-sweet-visual/flowers.svg",
+        "alt": "Beautiful bouquet"
+      },
+      {
+        "id": "opt2",
+        "label": "Books",
+        "image": "/decks/soft-sweet-visual/books.svg",
+        "alt": "Stack of interesting books"
+      },
+      {
+        "id": "opt3",
+        "label": "Jewelry",
+        "image": "/decks/soft-sweet-visual/jewelry.svg",
+        "alt": "Elegant jewelry"
+      },
+      {
+        "id": "opt4",
+        "label": "Experience",
+        "image": "/decks/soft-sweet-visual/experience.svg",
+        "alt": "Adventure experience"
+      }
+    ]
+  },
+  {
+    "id": "q17",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "What's their favorite type of weather?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Sunny",
+        "image": "/decks/soft-sweet-visual/sunny.svg",
+        "alt": "Bright sunny day"
+      },
+      {
+        "id": "opt2",
+        "label": "Rainy",
+        "image": "/decks/soft-sweet-visual/rainy.svg",
+        "alt": "Gentle rain"
+      },
+      {
+        "id": "opt3",
+        "label": "Snowy",
+        "image": "/decks/soft-sweet-visual/snowy.svg",
+        "alt": "Fresh snowfall"
+      },
+      {
+        "id": "opt4",
+        "label": "Cloudy",
+        "image": "/decks/soft-sweet-visual/cloudy.svg",
+        "alt": "Peaceful cloudy sky"
+      }
+    ]
+  },
+  {
+    "id": "q18",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "What's their ideal way to spend a rainy day?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Movie marathon",
+        "image": "/decks/soft-sweet-visual/marathon.svg",
+        "alt": "Watching movies on couch"
+      },
+      {
+        "id": "opt2",
+        "label": "Reading",
+        "image": "/decks/soft-sweet-visual/reading2.svg",
+        "alt": "Reading by window"
+      },
+      {
+        "id": "opt3",
+        "label": "Baking",
+        "image": "/decks/soft-sweet-visual/baking.svg",
+        "alt": "Baking cookies"
+      },
+      {
+        "id": "opt4",
+        "label": "Puzzles",
+        "image": "/decks/soft-sweet-visual/puzzles.svg",
+        "alt": "Working on jigsaw puzzle"
+      }
+    ]
+  },
+  {
+    "id": "q19",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "What's their favorite type of dessert?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Cake",
+        "image": "/decks/soft-sweet-visual/cake.svg",
+        "alt": "Beautiful birthday cake"
+      },
+      {
+        "id": "opt2",
+        "label": "Pie",
+        "image": "/decks/soft-sweet-visual/pie.svg",
+        "alt": "Homemade apple pie"
+      },
+      {
+        "id": "opt3",
+        "label": "Cookies",
+        "image": "/decks/soft-sweet-visual/cookies.svg",
+        "alt": "Fresh baked cookies"
+      },
+      {
+        "id": "opt4",
+        "label": "Fruit",
+        "image": "/decks/soft-sweet-visual/fruit.svg",
+        "alt": "Fresh fruit bowl"
+      }
+    ]
+  },
+  {
+    "id": "q20",
+    "deckId": "soft-sweet-visual",
+    "type": "image-mcq",
+    "text": "What's their ideal way to show love?",
+    "options": [
+      {
+        "id": "opt1",
+        "label": "Hugs",
+        "image": "/decks/soft-sweet-visual/hugs.svg",
+        "alt": "Warm embrace"
+      },
+      {
+        "id": "opt2",
+        "label": "Gifts",
+        "image": "/decks/soft-sweet-visual/gifts2.svg",
+        "alt": "Thoughtful presents"
+      },
+      {
+        "id": "opt3",
+        "label": "Words",
+        "image": "/decks/soft-sweet-visual/words.svg",
+        "alt": "Love letter"
+      },
+      {
+        "id": "opt4",
+        "label": "Time",
+        "image": "/decks/soft-sweet-visual/time.svg",
+        "alt": "Quality time together"
+      }
+    ]
+  }
+]
