@@ -50,7 +50,7 @@
     --warning-foreground: 0 0% 98%;
 
     /* Border radius */
-    --radius: 0.75rem;
+    --radius: 1.5rem;
   }
 
   .dark {
