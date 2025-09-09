@@ -8,9 +8,9 @@ import { useMutation } from 'convex/react'
 import { motion } from 'framer-motion'
 import { ArrowLeft, Users } from 'lucide-react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 
-export default function CreateRoomPage() {
+function CreateRoomContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const createRoom = useMutation(api.rooms.createRoom)
@@ -200,5 +200,24 @@ export default function CreateRoomPage() {
         </motion.div>
       </motion.div>
     </div>
+  )
+}
+
+export default function CreateRoomPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-6" />
+            <h2 className="text-xl font-semibold text-foreground">
+              Loading...
+            </h2>
+          </div>
+        </div>
+      }
+    >
+      <CreateRoomContent />
+    </Suspense>
   )
 }

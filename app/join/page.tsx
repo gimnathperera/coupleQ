@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { ArrowLeft, Users, AlertCircle } from 'lucide-react'
@@ -10,7 +10,7 @@ import { Button } from '@/lib/ui/button'
 import { Input } from '@/lib/ui/input'
 import { Card, CardContent, CardHeader, CardTitle } from '@/lib/ui/card'
 
-export default function JoinRoomPage() {
+function JoinRoomContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const joinRoom = useMutation(api.players.joinRoom)
@@ -202,5 +202,24 @@ export default function JoinRoomPage() {
         </motion.div>
       </motion.div>
     </div>
+  )
+}
+
+export default function JoinRoomPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-6" />
+            <h2 className="text-xl font-semibold text-foreground">
+              Loading...
+            </h2>
+          </div>
+        </div>
+      }
+    >
+      <JoinRoomContent />
+    </Suspense>
   )
 }
