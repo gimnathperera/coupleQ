@@ -447,13 +447,10 @@ export default function GameRoomPage() {
 
   // Loading game state
   return (
-    <div className="min-h-screen">
-      <AppBar />
-      <div className="flex items-center justify-center p-4 pt-8">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-pink-500 mx-auto mb-4"></div>
-          <p className="text-gray-600">Starting game...</p>
-        </div>
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-pink-500 mx-auto mb-4"></div>
+        <p className="text-gray-600">Starting game...</p>
       </div>
     </div>
   )

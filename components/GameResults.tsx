@@ -68,7 +68,7 @@ export function GameResults({
       transition={{ duration: 0.5 }}
     >
       <Card className="shadow-xl">
-        <CardHeader className="text-center">
+        <CardHeader className="text-center w-full flex flex-col items-center">
           <motion.div
             className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full mb-4"
             initial={{ scale: 0 }}
