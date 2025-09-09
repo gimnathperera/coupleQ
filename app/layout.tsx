@@ -6,9 +6,17 @@ import { ConvexClientProvider } from '@/lib/convex-provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'CoupleQ - TikTok-Style Couple Game',
+  title: 'CoupleQ - Couple Guessing Game',
   description:
     'A fun 2-player real-time couple game with image-based questions',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.svg',
+  },
 }
 
 export const viewport = {
