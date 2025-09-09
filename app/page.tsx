@@ -149,9 +149,7 @@ export default function LandingPage() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          <p>🎮 10 rounds of fun questions</p>
           <p>💕 Discover your compatibility</p>
-          <p>📱 Mobile-friendly design</p>
         </motion.div>
       </motion.div>
     </div>

@@ -107,8 +107,8 @@ export function ReadyPanel({
                     <span className="text-sm font-semibold">Ready</span>
                   </motion.div>
                 ) : (
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <Circle className="w-5 h-5" />
+                  <div className="flex items-center gap-1 text-muted-foreground">
+                    <Circle className="w-3 h-3" />
                     <span className="text-sm">Not ready</span>
                   </div>
                 )}
