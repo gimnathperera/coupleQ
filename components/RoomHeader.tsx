@@ -27,7 +27,7 @@ export function RoomHeader({
 
   return (
     <motion.header
-      className="w-full p-4 bg-background/95 backdrop-blur-sm border-b border-border shadow-soft"
+      className="w-full p-4 bg-background/95 backdrop-blur-sm border-b border-border shadow-soft rounded-2xl"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
