@@ -7,6 +7,9 @@ interface ImageSearchResult {
   source: 'unsplash' | 'placeholder' | 'fallback'
 }
 
+// Image source configuration
+const IMAGE_SOURCE = process.env.NEXT_PUBLIC_IMAGE_SOURCE || 'internet'
+
 // Unsplash API configuration
 const UNSPLASH_ACCESS_KEY = process.env.NEXT_PUBLIC_UNSPLASH_ACCESS_KEY
 const UNSPLASH_BASE_URL = 'https://api.unsplash.com'
@@ -343,12 +346,113 @@ function getContextualSearchQuery(
 }
 
 /**
+ * Get local SVG image path for an answer option
+ */
+function getLocalSvgImage(label: string): ImageSearchResult {
+  // Map common labels to their SVG file names
+  const svgMapping: Record<string, string> = {
+    beach: 'beach.svg',
+    mountains: 'mountains.svg',
+    'city walk': 'city.svg',
+    'stay home': 'home.svg',
+    'movie night': 'movie.svg',
+    'dinner out': 'restaurant.svg',
+    concert: 'concert.svg',
+    'game night': 'games.svg',
+    pizza: 'pizza.svg',
+    'ice cream': 'icecream.svg',
+    pasta: 'pasta.svg',
+    chocolate: 'chocolate.svg',
+    reading: 'reading.svg',
+    yoga: 'yoga.svg',
+    music: 'music.svg',
+    'nature walk': 'nature.svg',
+    'tropical island': 'island.svg',
+    'european city': 'europe.svg',
+    'adventure trip': 'adventure.svg',
+    'cultural tour': 'culture.svg',
+    'sleep in': 'sleep.svg',
+    'coffee & news': 'coffee.svg',
+    exercise: 'exercise.svg',
+    meditation: 'meditation.svg',
+    spring: 'spring.svg',
+    summer: 'summer.svg',
+    fall: 'fall.svg',
+    winter: 'winter.svg',
+    dog: 'dog.svg',
+    cat: 'cat.svg',
+    bird: 'bird.svg',
+    fish: 'fish.svg',
+    comedy: 'comedy.svg',
+    romance: 'romance.svg',
+    action: 'action.svg',
+    horror: 'horror.svg',
+    modern: 'modern.svg',
+    cozy: 'cozy.svg',
+    minimalist: 'minimalist.svg',
+    vintage: 'vintage.svg',
+    party: 'party.svg',
+    'quiet dinner': 'dinner.svg',
+    adventure: 'adventure2.svg',
+    'gift exchange': 'gifts.svg',
+    brunch: 'brunch.svg',
+    shopping: 'shopping.svg',
+    sports: 'sports.svg',
+    'art gallery': 'art.svg',
+    pop: 'pop.svg',
+    jazz: 'jazz.svg',
+    rock: 'rock.svg',
+    classical: 'classical.svg',
+    picnic: 'picnic.svg',
+    museum: 'museum.svg',
+    cooking: 'cooking.svg',
+    bath: 'bath.svg',
+    massage: 'massage.svg',
+    tea: 'tea.svg',
+    stargazing: 'stars.svg',
+    flowers: 'flowers.svg',
+    books: 'books.svg',
+    jewelry: 'jewelry.svg',
+    experience: 'experience.svg',
+    sunny: 'sunny.svg',
+    rainy: 'rainy.svg',
+    snowy: 'snowy.svg',
+    cloudy: 'cloudy.svg',
+    'movie marathon': 'marathon.svg',
+    baking: 'baking.svg',
+    puzzles: 'puzzles.svg',
+    cake: 'cake.svg',
+    pie: 'pie.svg',
+    cookies: 'cookies.svg',
+    fruit: 'fruit.svg',
+    hugs: 'hugs.svg',
+    gifts: 'gifts2.svg',
+    words: 'words.svg',
+    time: 'time.svg',
+  }
+
+  const svgFile = svgMapping[label.toLowerCase()] || 'placeholder.svg'
+  const svgPath = `/decks/soft-sweet-visual/${svgFile}`
+
+  return {
+    url: svgPath,
+    alt: `${label} image`,
+    source: 'fallback', // Using fallback source for local SVGs
+  }
+}
+
+/**
  * Main function to get image for an answer option
  */
 export async function getImageForAnswer(
   label: string,
   questionText?: string
 ): Promise<ImageSearchResult> {
+  // If using local images, return SVG path immediately
+  if (IMAGE_SOURCE === 'local') {
+    return getLocalSvgImage(label)
+  }
+
   // Create cache key that includes question context
   const cacheKey = questionText ? `${label}|${questionText}` : label
 
@@ -393,7 +497,12 @@ export async function preloadAnswerImages(
     labels.map((label) => getImageForAnswer(label, questionText))
   )
 
-  // Preload the actual images
+  // For local images, we don't need to preload as they're already available
+  if (IMAGE_SOURCE === 'local') {
+    return results
+  }
+
+  // Preload the actual images for internet sources
   const preloadPromises = results.map((result) => {
     return new Promise<void>((resolve) => {
       const img = new Image()
