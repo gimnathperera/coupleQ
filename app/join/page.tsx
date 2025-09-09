@@ -89,7 +89,6 @@ export default function JoinRoomPage() {
           <h1 className="text-xl font-semibold text-gray-800">Join Room</h1>
           <div className="w-16" /> {/* Spacer */}
         </div>
-
         {/* Join Card */}
         <Card className="shadow-xl">
           <CardHeader className="text-center">

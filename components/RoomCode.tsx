@@ -9,9 +9,18 @@ import { Button } from '@/lib/ui/button'
 interface RoomCodeProps {
   code: string
   className?: string
+  layout?: 'horizontal' | 'vertical' | 'compact'
+  showLabel?: boolean
+  label?: string
 }
 
-export function RoomCode({ code, className = '' }: RoomCodeProps) {
+export function RoomCode({
+  code,
+  className = '',
+  layout = 'horizontal',
+  showLabel = true,
+  label = 'Room Code:',
+}: RoomCodeProps) {
   const [copied, setCopied] = useState(false)
 
   const handleCopy = async () => {
@@ -24,22 +33,56 @@ export function RoomCode({ code, className = '' }: RoomCodeProps) {
     }
   }
 
+  const getLayoutClasses = () => {
+    switch (layout) {
+      case 'vertical':
+        return 'flex flex-col items-center space-y-2'
+      case 'compact':
+        return 'flex items-center space-x-1'
+      case 'horizontal':
+      default:
+        return 'flex items-center space-x-2'
+    }
+  }
+
+  const getCodeClasses = () => {
+    switch (layout) {
+      case 'compact':
+        return 'font-mono text-sm font-bold bg-gray-100 px-2 py-1 rounded'
+      case 'vertical':
+        return 'font-mono text-lg font-bold bg-gray-100 px-3 py-1 rounded'
+      case 'horizontal':
+      default:
+        return 'font-mono text-lg font-bold bg-gray-100 px-3 py-1 rounded'
+    }
+  }
+
+  const getLabelClasses = () => {
+    switch (layout) {
+      case 'compact':
+        return 'text-xs text-gray-600'
+      case 'vertical':
+        return 'text-sm text-gray-600'
+      case 'horizontal':
+      default:
+        return 'text-sm text-gray-600'
+    }
+  }
+
   return (
     <motion.div
-      className={`flex items-center space-x-2 ${className}`}
+      className={`${getLayoutClasses()} ${className}`}
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.3 }}
     >
-      <span className="text-sm text-gray-600">Room Code:</span>
-      <code className="font-mono text-lg font-bold bg-gray-100 px-3 py-1 rounded">
-        {formatRoomCode(code)}
-      </code>
+      {showLabel && <span className={getLabelClasses()}>{label}</span>}
+      <code className={getCodeClasses()}>{formatRoomCode(code)}</code>
       <Button
-        variant="outline"
-        size="sm"
+        variant="copy"
+        size="copy"
         onClick={handleCopy}
-        className="flex items-center space-x-1 p-1 rounded-sm"
+        className="flex items-center space-x-1"
       >
         {copied ? (
           <>

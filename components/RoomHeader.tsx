@@ -1,12 +1,11 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Copy, Check, Users } from 'lucide-react'
+import { Users } from 'lucide-react'
 import { Room, Player } from '@/lib/types'
-import { formatRoomCode, isPlayerOnline } from '@/lib/utils'
-import { Button } from '@/lib/ui/button'
+import { isPlayerOnline } from '@/lib/utils'
 import { Progress } from '@/lib/ui/progress'
+import { RoomCode } from './RoomCode'
 
 interface RoomHeaderProps {
   room: Room
@@ -19,18 +18,6 @@ export function RoomHeader({
   players,
   currentPlayerId,
 }: RoomHeaderProps) {
-  const [copied, setCopied] = useState(false)
-
-  const handleCopyCode = async () => {
-    try {
-      await navigator.clipboard.writeText(room.code)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
-    } catch (err) {
-      console.error('Failed to copy room code:', err)
-    }
-  }
-
   const currentPlayer = players.find((p) => p._id === currentPlayerId)
   const otherPlayer = players.find((p) => p._id !== currentPlayerId)
   const progress =
@@ -48,30 +35,12 @@ export function RoomHeader({
       <div className="max-w-md mx-auto">
         {/* Room Code */}
         <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center space-x-2">
-            <span className="text-sm text-gray-600">Room Code:</span>
-            <code className="font-mono text-lg font-bold bg-gray-100 px-3 py-1 rounded">
-              {formatRoomCode(room.code)}
-            </code>
-          </div>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={handleCopyCode}
-            className="flex items-center space-x-1"
-          >
-            {copied ? (
-              <>
-                <Check className="w-4 h-4 text-green-600" />
-                <span className="text-green-600">Copied!</span>
-              </>
-            ) : (
-              <>
-                <Copy className="w-4 h-4" />
-                <span>Copy</span>
-              </>
-            )}
-          </Button>
+          <RoomCode
+            code={room.code}
+            layout="horizontal"
+            showLabel={true}
+            className="flex-1"
+          />
         </div>
 
         {/* Progress */}

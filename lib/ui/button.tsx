@@ -21,13 +21,15 @@ const buttonVariants = cva(
         link: 'text-primary underline-offset-4 hover:underline',
         gradient:
           'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700 shadow-lg hover:shadow-xl',
+        copy: 'bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-900 shadow-sm hover:shadow-md transition-all duration-200',
       },
       size: {
         default: 'h-10 px-4 py-2',
         sm: 'h-9 rounded-md px-3 text-xs',
         lg: 'h-12 rounded-lg px-8 text-base',
-        xl: 'h-14 rounded-lg px-10 text-lg',
+        xl: 'h-10 rounded-lg px-10 text-sm',
         icon: 'h-10 w-10',
+        copy: 'h-8 px-2 py-1 text-xs rounded-md',
       },
     },
     defaultVariants: {

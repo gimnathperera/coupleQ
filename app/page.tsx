@@ -116,7 +116,7 @@ export default function LandingPage() {
                 onClick={handleCreateRoom}
                 disabled={!name.trim() || isCreating}
                 variant="gradient"
-                className="w-full flex items-center justify-center gap-3"
+                className="w-full flex items-center justify-center gap-3 cursor-pointer"
                 size="xl"
               >
                 {isCreating ? (
@@ -126,7 +126,7 @@ export default function LandingPage() {
                   </>
                 ) : (
                   <>
-                    <Users className="w-5 h-5" />
+                    <Users className="w-4 h-4" />
                     <span>Create Room</span>
                   </>
                 )}
@@ -136,10 +136,10 @@ export default function LandingPage() {
                 onClick={handleJoinRoom}
                 disabled={!name.trim() || isJoining}
                 variant="outline"
-                className="w-full flex items-center justify-center gap-3"
+                className="w-full flex items-center justify-center gap-3 cursor-pointer"
                 size="xl"
               >
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4" />
                 <span>Join Room</span>
               </Button>
             </div>

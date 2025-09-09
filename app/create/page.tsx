@@ -122,7 +122,6 @@ export default function CreateRoomPage() {
           <h1 className="text-xl font-semibold text-gray-800">Room Created!</h1>
           <div className="w-16" /> {/* Spacer */}
         </div>
-
         {/* Success Card */}
         <Card className="shadow-xl">
           <CardHeader className="text-center items-center">
@@ -149,7 +148,10 @@ export default function CreateRoomPage() {
           <CardContent className="space-y-6">
             {/* Room Code */}
             <div className="text-center">
-              <RoomCode code={roomData.code} className="justify-center" />
+              <RoomCode
+                code={roomData.code}
+                className="justify-center bg-transparent"
+              />
             </div>
 
             {/* Instructions */}
