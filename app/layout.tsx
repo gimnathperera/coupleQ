@@ -28,7 +28,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <ConvexClientProvider>
           <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-red-50">
-            <div className="container mx-auto max-w-md">{children}</div>
+            <div className="container mx-auto max-w-md px-4 py-6 sm:px-6 sm:py-8">
+              {children}
+            </div>
           </div>
         </ConvexClientProvider>
       </body>

@@ -40,9 +40,9 @@ export default function LandingPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
+    <div className="min-h-screen flex items-center justify-center">
       <motion.div
-        className="w-full max-w-md"
+        className="w-full max-w-sm sm:max-w-md"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -50,7 +50,7 @@ export default function LandingPage() {
         {/* Header */}
         <div className="text-center mb-8">
           <motion.div
-            className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full mb-4"
+            className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full mb-6 shadow-glow-pink"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{
@@ -64,7 +64,7 @@ export default function LandingPage() {
           </motion.div>
 
           <motion.h1
-            className="text-4xl font-bold text-gray-800 mb-2"
+            className="text-4xl sm:text-5xl font-bold text-foreground mb-3"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -73,7 +73,7 @@ export default function LandingPage() {
           </motion.h1>
 
           <motion.p
-            className="text-gray-600 text-lg"
+            className="text-muted-foreground text-lg sm:text-xl leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
@@ -83,19 +83,15 @@ export default function LandingPage() {
         </div>
 
         {/* Main Card */}
-        <Card className="shadow-xl">
+        <Card className="shadow-strong">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl">Let&apos;s get started!</CardTitle>
+            <CardTitle className="text-2xl sm:text-3xl">
+              Let&apos;s get started!
+            </CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
             {/* Name Input */}
             <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
-                Your name
-              </label>
               <Input
                 id="name"
                 type="text"
@@ -116,8 +112,8 @@ export default function LandingPage() {
                 onClick={handleCreateRoom}
                 disabled={!name.trim() || isCreating}
                 variant="gradient"
-                className="w-full flex items-center justify-center gap-3 cursor-pointer"
-                size="xl"
+                className="w-full flex items-center justify-center gap-3"
+                size="lg"
               >
                 {isCreating ? (
                   <>
@@ -126,7 +122,7 @@ export default function LandingPage() {
                   </>
                 ) : (
                   <>
-                    <Users className="w-4 h-4" />
+                    <Users className="w-5 h-5" />
                     <span>Create Room</span>
                   </>
                 )}
@@ -136,10 +132,10 @@ export default function LandingPage() {
                 onClick={handleJoinRoom}
                 disabled={!name.trim() || isJoining}
                 variant="outline"
-                className="w-full flex items-center justify-center gap-3 cursor-pointer"
-                size="xl"
+                className="w-full flex items-center justify-center gap-3"
+                size="lg"
               >
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-5 h-5" />
                 <span>Join Room</span>
               </Button>
             </div>
@@ -148,14 +144,12 @@ export default function LandingPage() {
 
         {/* Features */}
         <motion.div
-          className="mt-8 text-center text-sm text-gray-500"
+          className="mt-8 text-center text-sm text-muted-foreground space-y-1"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          <p>🎮 10 rounds of fun questions</p>
           <p>💕 Discover your compatibility</p>
-          <p>📱 Mobile-friendly design</p>
         </motion.div>
       </motion.div>
     </div>

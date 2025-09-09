@@ -93,20 +93,6 @@ export const AVATAR_OPTIONS = [
   '😤',
   '🤔',
   '🤫',
-  '🤭',
-  '😏',
-  '😌',
-  '😑',
-  '🙄',
-  '😬',
-  '🤐',
-  '🤢',
-  '🤮',
-  '🤧',
-  '🥵',
-  '🥶',
-  '😵',
-  '🤪',
 ] as const
 
 export type Avatar = (typeof AVATAR_OPTIONS)[number]
