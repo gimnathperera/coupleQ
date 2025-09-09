@@ -92,7 +92,7 @@ export default function JoinRoomPage() {
         </div>
         {/* Join Card */}
         <Card className="shadow-strong">
-          <CardHeader className="text-center">
+          <CardHeader className="text-center flex flex-col items-center">
             <motion.div
               className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6 shadow-glow"
               initial={{ scale: 0 }}
