@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Question, Player } from '@/lib/types'
 import { ImageOptionCard } from './ImageOptionCard'
-import { usePreloadImages } from '@/lib/preload'
+import { usePreloadAnswerImages } from '@/lib/preload'
 
 interface QuestionGridProps {
   question: Question
@@ -28,9 +28,9 @@ export function QuestionGrid({
   disabled = false,
   isRevealed = false,
 }: QuestionGridProps) {
-  // Preload images for current question
-  const imageUrls = question.options.map((opt) => opt.image)
-  const { loaded } = usePreloadImages(imageUrls)
+  // Preload images for current question using the new image service
+  const imageLabels = question.options.map((opt) => opt.label)
+  const { loaded } = usePreloadAnswerImages(imageLabels, question.text)
 
   // Helper function to get player avatar for a specific option
   const getPlayerChoice = (optionId: string) => {
@@ -94,6 +94,7 @@ export function QuestionGrid({
               playerAvatar={playerAvatar}
               onClick={() => onSelectOption(option.id)}
               disabled={disabled || isCurrentPlayerLocked}
+              questionText={question.text}
             />
           </motion.div>
         )

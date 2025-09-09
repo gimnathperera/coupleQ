@@ -1,10 +1,14 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Lock, Check } from 'lucide-react'
 import { Option } from '@/lib/types'
 import { cn } from '@/lib/utils'
+import {
+  getImageForAnswer,
+  getFallbackGradientClass,
+} from '@/lib/image-service'
 
 interface ImageOptionCardProps {
   option: Option
@@ -15,6 +19,7 @@ interface ImageOptionCardProps {
   playerAvatar?: string
   onClick: () => void
   disabled?: boolean
+  questionText?: string
 }
 
 export function ImageOptionCard({
@@ -26,8 +31,33 @@ export function ImageOptionCard({
   playerAvatar,
   onClick,
   disabled = false,
+  questionText,
 }: ImageOptionCardProps) {
   const [imageError, setImageError] = useState(false)
+  const [imageUrl, setImageUrl] = useState<string>(option.image)
+  const [imageAlt, setImageAlt] = useState<string>(option.alt || option.label)
+  const [isLoading, setIsLoading] = useState(true)
+
+  // Fetch image from internet service
+  useEffect(() => {
+    const fetchImage = async () => {
+      try {
+        setIsLoading(true)
+        const imageResult = await getImageForAnswer(option.label, questionText)
+        setImageUrl(imageResult.url)
+        setImageAlt(imageResult.alt)
+        setImageError(false)
+      } catch (error) {
+        console.warn('Failed to fetch image for:', option.label, error)
+        // Keep the original image as fallback
+        setImageError(false)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    fetchImage()
+  }, [option.label, questionText])
 
   const handleImageError = () => {
     setImageError(true)
@@ -54,16 +84,24 @@ export function ImageOptionCard({
       transition={{ duration: 0.3 }}
     >
       {/* Image or Fallback */}
-      {!imageError ? (
+      {isLoading ? (
+        <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+        </div>
+      ) : !imageError ? (
         <img
-          src={option.image}
-          alt={option.alt || option.label}
+          src={imageUrl}
+          alt={imageAlt}
           className="w-full h-full object-cover"
           onError={handleImageError}
         />
       ) : (
-        <div className="w-full h-full bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 flex items-center justify-center">
-          <span className="text-white font-bold text-lg">{option.label}</span>
+        <div
+          className={`w-full h-full bg-gradient-to-br ${getFallbackGradientClass(option.label)} flex items-center justify-center`}
+        >
+          <span className="text-white font-bold text-lg drop-shadow-lg">
+            {option.label}
+          </span>
         </div>
       )}
 
