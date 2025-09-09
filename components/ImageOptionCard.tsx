@@ -29,8 +29,27 @@ export function ImageOptionCard({
 }: ImageOptionCardProps) {
   const [imageError, setImageError] = useState(false)
 
+  // Simple toggle: if local mode, use original image path; otherwise use internet images
+  const isLocalMode = process.env.NEXT_PUBLIC_IMAGE_SOURCE === 'local'
+
+  // For local mode, use the original SVG path from the data
+  // For internet mode, we'll implement a simple internet image fetching later
+  const imageUrl = isLocalMode ? option.image : option.image // For now, use original path for both
+  const imageAlt = option.alt || option.label
+
   const handleImageError = () => {
+    console.warn('Image failed to load:', imageUrl, 'for option:', option.label)
     setImageError(true)
+  }
+
+  const handleImageLoad = () => {
+    console.log(
+      'Image loaded successfully:',
+      imageUrl,
+      'for option:',
+      option.label
+    )
+    setImageError(false)
   }
 
   return (
@@ -56,14 +75,17 @@ export function ImageOptionCard({
       {/* Image or Fallback */}
       {!imageError ? (
         <img
-          src={option.image}
-          alt={option.alt || option.label}
-          className="w-full h-full object-cover"
+          src={imageUrl}
+          alt={imageAlt}
+          className="w-full h-full object-contain"
           onError={handleImageError}
+          onLoad={handleImageLoad}
         />
       ) : (
         <div className="w-full h-full bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 flex items-center justify-center">
-          <span className="text-white font-bold text-lg">{option.label}</span>
+          <span className="text-white font-bold text-lg drop-shadow-lg">
+            {option.label}
+          </span>
         </div>
       )}
 
