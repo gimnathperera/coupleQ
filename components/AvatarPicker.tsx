@@ -18,7 +18,7 @@ export function AvatarPicker({
       <h3 className="text-lg font-semibold text-foreground mb-6 text-center">
         Choose your avatar
       </h3>
-      <div className="grid grid-cols-8 gap-3 max-w-sm mx-auto">
+      <div className="grid grid-cols-6 gap-3 max-w-sm mx-auto">
         {AVATAR_OPTIONS.map((avatar) => (
           <motion.button
             key={avatar}

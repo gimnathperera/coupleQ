@@ -92,12 +92,6 @@ export default function LandingPage() {
           <CardContent className="space-y-6">
             {/* Name Input */}
             <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-semibold text-foreground mb-3"
-              >
-                Your name
-              </label>
               <Input
                 id="name"
                 type="text"
