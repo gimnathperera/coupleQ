@@ -69,31 +69,32 @@ export default function JoinRoomPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
+    <div className="min-h-screen flex items-center justify-center">
       <motion.div
-        className="w-full max-w-md"
+        className="w-full max-w-sm sm:max-w-md"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
         {/* Header */}
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between mb-8">
           <Button
             variant="ghost"
             onClick={() => router.push('/')}
-            className="flex items-center space-x-2"
+            className="flex items-center gap-2"
+            size="sm"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Back</span>
           </Button>
-          <h1 className="text-xl font-semibold text-gray-800">Join Room</h1>
+          <h1 className="text-xl font-semibold text-foreground">Join Room</h1>
           <div className="w-16" /> {/* Spacer */}
         </div>
         {/* Join Card */}
-        <Card className="shadow-xl">
+        <Card className="shadow-strong">
           <CardHeader className="text-center">
             <motion.div
-              className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4"
+              className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6 shadow-glow"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{
@@ -103,21 +104,23 @@ export default function JoinRoomPage() {
                 damping: 30,
               }}
             >
-              <Users className="w-8 h-8 text-blue-600" />
+              <Users className="w-8 h-8 text-primary" />
             </motion.div>
-            <CardTitle className="text-2xl">Join a Game</CardTitle>
-            <p className="text-gray-600">
+            <CardTitle className="text-2xl sm:text-3xl">Join a Game</CardTitle>
+            <p className="text-muted-foreground text-lg">
               Enter the 6-character room code to join your partner
             </p>
           </CardHeader>
           <CardContent className="space-y-6">
             {/* Player Info */}
-            <div className="bg-gray-50 rounded-lg p-4">
-              <div className="flex items-center space-x-3">
-                <span className="text-3xl">{avatar}</span>
+            <div className="bg-secondary/50 rounded-2xl p-6 border border-border">
+              <div className="flex items-center gap-4">
+                <span className="text-4xl">{avatar}</span>
                 <div>
-                  <p className="font-semibold text-gray-800">{name}</p>
-                  <p className="text-sm text-gray-600">Ready to join</p>
+                  <p className="font-semibold text-foreground text-lg">
+                    {name}
+                  </p>
+                  <p className="text-sm text-muted-foreground">Ready to join</p>
                 </div>
               </div>
             </div>
@@ -126,7 +129,7 @@ export default function JoinRoomPage() {
             <div>
               <label
                 htmlFor="roomCode"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-semibold text-foreground mb-3"
               >
                 Room Code
               </label>
@@ -148,7 +151,7 @@ export default function JoinRoomPage() {
                 maxLength={6}
                 className="text-center text-2xl font-mono tracking-widest"
               />
-              <p className="text-xs text-gray-500 mt-1">
+              <p className="text-xs text-muted-foreground mt-2">
                 Enter the code shared by your partner
               </p>
             </div>
@@ -156,7 +159,7 @@ export default function JoinRoomPage() {
             {/* Error Message */}
             {error && (
               <motion.div
-                className="flex items-center space-x-2 text-red-600 bg-red-50 p-3 rounded-lg"
+                className="flex items-center gap-3 text-destructive bg-destructive/10 p-4 rounded-2xl border border-destructive/20"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
               >
@@ -171,7 +174,7 @@ export default function JoinRoomPage() {
               disabled={!roomCode.trim() || roomCode.length !== 6 || isJoining}
               variant="gradient"
               className="w-full flex items-center justify-center gap-3"
-              size="xl"
+              size="lg"
             >
               {isJoining ? (
                 <>
@@ -190,7 +193,7 @@ export default function JoinRoomPage() {
 
         {/* Tips */}
         <motion.div
-          className="mt-6 text-center text-sm text-gray-500"
+          className="mt-8 text-center text-sm text-muted-foreground"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}

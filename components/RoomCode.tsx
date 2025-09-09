@@ -48,24 +48,24 @@ export function RoomCode({
   const getCodeClasses = () => {
     switch (layout) {
       case 'compact':
-        return 'font-mono text-sm font-bold bg-gray-100 px-2 py-1 rounded'
+        return 'font-mono text-xs font-bold bg-secondary px-2 py-1 rounded-md border border-border'
       case 'vertical':
-        return 'font-mono text-lg font-bold bg-gray-100 px-3 py-1 rounded'
+        return 'font-mono text-xs font-bold bg-secondary px-2 py-1 rounded-md border border-border'
       case 'horizontal':
       default:
-        return 'font-mono text-lg font-bold bg-gray-100 px-3 py-1 rounded'
+        return 'font-mono text-xs font-bold bg-secondary px-2 py-1 rounded-md border border-border'
     }
   }
 
   const getLabelClasses = () => {
     switch (layout) {
       case 'compact':
-        return 'text-xs text-gray-600'
+        return 'text-xs text-muted-foreground'
       case 'vertical':
-        return 'text-sm text-gray-600'
+        return 'text-sm text-muted-foreground'
       case 'horizontal':
       default:
-        return 'text-sm text-gray-600'
+        return 'text-sm text-muted-foreground'
     }
   }
 
@@ -79,19 +79,19 @@ export function RoomCode({
       {showLabel && <span className={getLabelClasses()}>{label}</span>}
       <code className={getCodeClasses()}>{formatRoomCode(code)}</code>
       <Button
-        variant="copy"
-        size="copy"
+        variant="ghost"
+        size="sm"
         onClick={handleCopy}
-        className="flex items-center space-x-1"
+        className="flex items-center gap-1 rounded-sm text-xs shadow-none border-none"
       >
         {copied ? (
           <>
-            <Check className="w-4 h-4 text-green-600" />
-            <span className="text-green-600">Copied!</span>
+            <Check className="w-3 h-3 text-success" />
+            <span className="text-success">Copied!</span>
           </>
         ) : (
           <>
-            <Copy className="w-4 h-4" />
+            <Copy className="w-3 h-3" />
             <span>Copy</span>
           </>
         )}

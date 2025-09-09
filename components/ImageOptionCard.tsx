@@ -36,12 +36,14 @@ export function ImageOptionCard({
   return (
     <motion.button
       className={cn(
-        'relative w-full aspect-square rounded-xl overflow-hidden group',
+        'relative w-full aspect-square rounded-2xl overflow-hidden group',
         'focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2',
-        'transition-all duration-200',
-        isSelected && !disabled && 'ring-4 ring-primary ring-offset-2',
+        'transition-all duration-200 touch-manipulation',
+        isSelected &&
+          !disabled &&
+          'ring-4 ring-primary ring-offset-2 shadow-glow',
         disabled && 'opacity-50 cursor-not-allowed',
-        !disabled && 'hover:scale-105 active:scale-95'
+        !disabled && 'hover:scale-105 active:scale-95 hover:shadow-medium'
       )}
       onClick={onClick}
       disabled={disabled}
@@ -78,7 +80,7 @@ export function ImageOptionCard({
       {/* Selection State */}
       {isSelected && !isRevealed && (
         <motion.div
-          className="absolute top-2 right-2 bg-primary text-primary-foreground rounded-full p-2"
+          className="absolute top-3 right-3 bg-primary text-primary-foreground rounded-full p-2 shadow-soft"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: 'spring', stiffness: 500, damping: 30 }}
@@ -90,7 +92,7 @@ export function ImageOptionCard({
       {/* Locked State */}
       {isLocked && (
         <motion.div
-          className="absolute top-2 right-2 bg-green-500 text-white rounded-full p-2"
+          className="absolute top-3 right-3 bg-success text-success-foreground rounded-full p-2 shadow-soft"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: 'spring', stiffness: 500, damping: 30 }}
@@ -102,7 +104,7 @@ export function ImageOptionCard({
       {/* Player Choice Indicator */}
       {showPlayerChoice && playerAvatar && (
         <motion.div
-          className="absolute top-2 left-2 bg-white/90 rounded-full p-1"
+          className="absolute top-3 left-3 bg-white/95 rounded-full p-2 shadow-soft"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{
@@ -119,7 +121,7 @@ export function ImageOptionCard({
       {/* Match Indicator */}
       {isRevealed && isSelected && (
         <motion.div
-          className="absolute inset-0 bg-green-500/20 border-4 border-green-500 rounded-xl"
+          className="absolute inset-0 bg-success/20 border-4 border-success rounded-2xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}

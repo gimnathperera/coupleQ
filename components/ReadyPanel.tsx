@@ -32,16 +32,16 @@ export function ReadyPanel({
 
   return (
     <motion.div
-      className="w-full max-w-md mx-auto p-6 bg-white rounded-2xl shadow-lg"
+      className="w-full max-w-sm sm:max-w-md mx-auto p-6 bg-card rounded-2xl shadow-strong border border-border"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="text-center mb-6">
-        <h2 className="text-2xl font-bold text-gray-800 mb-2">
+      <div className="text-center mb-8">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
           Ready to Play?
         </h2>
-        <p className="text-gray-600">
+        <p className="text-muted-foreground text-lg">
           Both players need to be ready to start the game
         </p>
       </div>
@@ -56,23 +56,23 @@ export function ReadyPanel({
             <motion.div
               key={player._id}
               className={`
-                flex items-center justify-between p-4 rounded-xl border-2
+                flex items-center justify-between p-4 rounded-2xl border-2
                 ${
                   isCurrentPlayer
-                    ? 'border-primary bg-primary/5'
-                    : 'border-gray-200 bg-gray-50'
+                    ? 'border-primary bg-primary/5 shadow-soft'
+                    : 'border-border bg-secondary/50'
                 }
               `}
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <div className="flex items-center space-x-3">
-                <span className="text-3xl">{player.avatar}</span>
+              <div className="flex items-center gap-4">
+                <span className="text-4xl">{player.avatar}</span>
                 <div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center gap-2">
                     <span
-                      className={`font-semibold ${isCurrentPlayer ? 'text-primary' : 'text-gray-800'}`}
+                      className={`font-semibold text-lg ${isCurrentPlayer ? 'text-primary' : 'text-foreground'}`}
                     >
                       {player.name}
                     </span>
@@ -82,32 +82,32 @@ export function ReadyPanel({
                       </span>
                     )}
                   </div>
-                  <div className="flex items-center space-x-1">
+                  <div className="flex items-center gap-1">
                     <div
                       className={`w-2 h-2 rounded-full ${
-                        isOnline ? 'bg-green-500' : 'bg-gray-400'
+                        isOnline ? 'bg-success' : 'bg-muted-foreground'
                       }`}
                     />
-                    <span className="text-xs text-gray-500">
+                    <span className="text-xs text-muted-foreground">
                       {isOnline ? 'Online' : 'Offline'}
                     </span>
                   </div>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center gap-2">
                 {player.ready ? (
                   <motion.div
-                    className="flex items-center space-x-1 text-green-600"
+                    className="flex items-center gap-2 text-success"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                   >
                     <CheckCircle className="w-5 h-5" />
-                    <span className="text-sm font-medium">Ready</span>
+                    <span className="text-sm font-semibold">Ready</span>
                   </motion.div>
                 ) : (
-                  <div className="flex items-center space-x-1 text-gray-400">
+                  <div className="flex items-center gap-2 text-muted-foreground">
                     <Circle className="w-5 h-5" />
                     <span className="text-sm">Not ready</span>
                   </div>
@@ -119,7 +119,7 @@ export function ReadyPanel({
       </div>
 
       {/* Ready Toggle */}
-      <div className="mb-6">
+      <div className="mb-8">
         <Button
           onClick={onToggleReady}
           disabled={disabled}
@@ -163,8 +163,8 @@ export function ReadyPanel({
 
       {/* Waiting Message */}
       {!canStart && players.length === 2 && (
-        <div className="text-center text-gray-500">
-          <Users className="w-8 h-8 mx-auto mb-2 opacity-50" />
+        <div className="text-center text-muted-foreground">
+          <Users className="w-8 h-8 mx-auto mb-3 opacity-50" />
           <p className="text-sm">
             {allPlayersReady
               ? 'Only the host can start the game'

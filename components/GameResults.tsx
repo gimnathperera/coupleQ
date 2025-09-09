@@ -62,15 +62,15 @@ export function GameResults({
 
   return (
     <motion.div
-      className="w-full max-w-md mx-auto"
+      className="w-full max-w-sm sm:max-w-md mx-auto"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Card className="shadow-xl">
+      <Card className="shadow-strong">
         <CardHeader className="text-center w-full flex flex-col items-center">
           <motion.div
-            className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full mb-4"
+            className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full mb-6 shadow-glow"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{
@@ -83,10 +83,12 @@ export function GameResults({
             <Trophy className="w-10 h-10 text-white" />
           </motion.div>
 
-          <CardTitle className="text-3xl text-gray-800">
+          <CardTitle className="text-3xl sm:text-4xl text-foreground">
             Game Complete!
           </CardTitle>
-          <p className="text-gray-600">Here&apos;s how you did together</p>
+          <p className="text-muted-foreground text-lg">
+            Here&apos;s how you did together
+          </p>
         </CardHeader>
 
         <CardContent className="space-y-6">
@@ -105,10 +107,10 @@ export function GameResults({
             >
               {totalScore}/{room.rounds}
             </motion.div>
-            <div className="text-2xl font-semibold text-gray-700 mb-1">
+            <div className="text-2xl font-semibold text-foreground mb-1">
               {percentage}%
             </div>
-            <div className="text-lg text-gray-600">{message}</div>
+            <div className="text-lg text-muted-foreground">{message}</div>
           </div>
 
           {/* Players */}
@@ -122,20 +124,22 @@ export function GameResults({
                 transition={{ delay: 0.4 }}
               >
                 <div className="text-4xl mb-2">{player.avatar}</div>
-                <div className="font-semibold text-gray-800">{player.name}</div>
+                <div className="font-semibold text-foreground">
+                  {player.name}
+                </div>
               </motion.div>
             ))}
           </div>
 
           {/* Progress Bar */}
-          <div className="space-y-2">
-            <div className="flex justify-between text-sm text-gray-600">
+          <div className="space-y-3">
+            <div className="flex justify-between text-sm text-muted-foreground">
               <span>Compatibility</span>
               <span>{percentage}%</span>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-3">
+            <div className="w-full bg-secondary rounded-full h-4">
               <motion.div
-                className="bg-gradient-to-r from-pink-500 to-purple-600 h-3 rounded-full"
+                className="bg-gradient-to-r from-pink-500 to-purple-600 h-4 rounded-full shadow-soft"
                 initial={{ width: 0 }}
                 animate={{ width: `${percentage}%` }}
                 transition={{ delay: 0.5, duration: 1, ease: 'easeOut' }}
@@ -144,10 +148,11 @@ export function GameResults({
           </div>
 
           {/* Action Buttons */}
-          <div className="space-y-3">
+          <div className="space-y-4">
             <Button
               onClick={onRematch}
-              className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700"
+              variant="gradient"
+              className="w-full flex items-center justify-center gap-3"
               size="lg"
             >
               <RotateCcw className="w-5 h-5" />
@@ -157,7 +162,7 @@ export function GameResults({
             <Button
               onClick={handleShare}
               variant="outline"
-              className="w-full flex items-center justify-center space-x-2"
+              className="w-full flex items-center justify-center gap-3"
               size="lg"
             >
               <Share2 className="w-5 h-5" />
@@ -166,11 +171,11 @@ export function GameResults({
           </div>
 
           {/* Fun Stats */}
-          <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg p-4">
-            <h3 className="font-semibold text-gray-800 mb-2 text-center">
+          <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-6">
+            <h3 className="font-semibold text-foreground mb-3 text-center text-lg">
               Fun Facts
             </h3>
-            <div className="text-sm text-gray-600 space-y-1">
+            <div className="text-sm text-muted-foreground space-y-2">
               <p>
                 🎯 You matched on {totalScore} out of {room.rounds} questions
               </p>

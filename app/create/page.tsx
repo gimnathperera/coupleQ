@@ -63,17 +63,19 @@ export default function CreateRoomPage() {
 
   if (isCreating) {
     return (
-      <div className="min-h-screen flex items-center justify-center p-4">
+      <div className="min-h-screen flex items-center justify-center">
         <motion.div
           className="text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-          <h2 className="text-xl font-semibold text-gray-800">
+          <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-6" />
+          <h2 className="text-xl font-semibold text-foreground">
             Creating your room...
           </h2>
-          <p className="text-gray-600 mt-2">This will just take a moment</p>
+          <p className="text-muted-foreground mt-2">
+            This will just take a moment
+          </p>
         </motion.div>
       </div>
     )
@@ -81,14 +83,18 @@ export default function CreateRoomPage() {
 
   if (error) {
     return (
-      <div className="min-h-screen flex items-center justify-center p-4">
-        <Card className="w-full max-w-md">
+      <div className="min-h-screen flex items-center justify-center">
+        <Card className="w-full max-w-sm sm:max-w-md shadow-strong">
           <CardHeader className="text-center">
-            <CardTitle className="text-red-600">Error</CardTitle>
+            <CardTitle className="text-destructive">Error</CardTitle>
           </CardHeader>
           <CardContent className="text-center space-y-4">
-            <p className="text-gray-600">{error}</p>
-            <Button onClick={() => router.push('/')} className="w-full">
+            <p className="text-muted-foreground">{error}</p>
+            <Button
+              onClick={() => router.push('/')}
+              className="w-full"
+              size="lg"
+            >
               Go Back
             </Button>
           </CardContent>
@@ -102,31 +108,34 @@ export default function CreateRoomPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
+    <div className="min-h-screen flex items-center justify-center">
       <motion.div
-        className="w-full max-w-md"
+        className="w-full max-w-sm sm:max-w-md"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
         {/* Header */}
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between mb-8">
           <Button
             variant="ghost"
             onClick={() => router.push('/')}
-            className="flex items-center space-x-2"
+            className="flex items-center gap-2"
+            size="sm"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Back</span>
           </Button>
-          <h1 className="text-xl font-semibold text-gray-800">Room Created!</h1>
+          <h1 className="text-xl font-semibold text-foreground">
+            Room Created!
+          </h1>
           <div className="w-16" /> {/* Spacer */}
         </div>
         {/* Success Card */}
-        <Card className="shadow-xl">
+        <Card className="shadow-strong">
           <CardHeader className="text-center items-center">
             <motion.div
-              className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4"
+              className="inline-flex items-center justify-center w-16 h-16 bg-success/10 rounded-full mb-6 shadow-glow"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{
@@ -136,12 +145,12 @@ export default function CreateRoomPage() {
                 damping: 30,
               }}
             >
-              <Users className="w-8 h-8 text-green-600" />
+              <Users className="w-8 h-8 text-success" />
             </motion.div>
-            <CardTitle className="text-2xl text-green-600">
+            <CardTitle className="text-2xl sm:text-3xl text-success">
               Room Ready!
             </CardTitle>
-            <p className="text-gray-600">
+            <p className="text-muted-foreground text-lg">
               Share the room code with your partner to start playing
             </p>
           </CardHeader>
@@ -155,9 +164,11 @@ export default function CreateRoomPage() {
             </div>
 
             {/* Instructions */}
-            <div className="bg-blue-50 rounded-lg p-4">
-              <h3 className="font-semibold text-blue-800 mb-2">How to play:</h3>
-              <ol className="text-sm text-blue-700 space-y-1">
+            <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10">
+              <h3 className="font-semibold text-primary mb-3 text-lg">
+                How to play:
+              </h3>
+              <ol className="text-sm text-muted-foreground space-y-2">
                 <li>1. Share the room code with your partner</li>
                 <li>2. Wait for them to join</li>
                 <li>3. Both players mark as ready</li>
@@ -170,7 +181,7 @@ export default function CreateRoomPage() {
               onClick={handleGoToRoom}
               variant="gradient"
               className="w-full flex items-center justify-center gap-3"
-              size="xl"
+              size="lg"
             >
               <Users className="w-5 h-5" />
               <span>Go to Room</span>
@@ -180,7 +191,7 @@ export default function CreateRoomPage() {
 
         {/* Tips */}
         <motion.div
-          className="mt-6 text-center text-sm text-gray-500"
+          className="mt-8 text-center text-sm text-muted-foreground"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
