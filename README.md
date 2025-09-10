@@ -1,52 +1,53 @@
-# 💕 CoupleQ — Playful Compatibility Game  
+# 💕 CoupleQ — Playful Compatibility Game
 
 > **CoupleQ** is a fun, real-time **2-player couple game** built with **Next.js + Convex**.  
-> Discover your compatibility through **beautiful image-based questions** and laugh along the way!  
+> Discover your compatibility through **beautiful image-based questions** and laugh along the way!
 
 ---
 
-## 🎨 Branding & Logo  
+## 🎨 Branding & Logo
 
-![CoupleQ Logo](./docs/screenshots/logo-placeholder.png){ width=600 }  
-*CoupleQ branding and logo preview*
-
----
-
-## ✨ Features That Shine  
-
-- 🎮 **Real-time multiplayer** — Play instantly with your partner  
-- 📱 **Mobile-first design** — TikTok-style vertical layout  
-- 🎨 **Beautiful UI** — Smooth **Framer Motion** animations  
-- 💕 **Compatibility scoring** — See your couple score (0–10)  
-- 🖼️ **Image-based questions** — Fun, visual choices every round  
-- ⚡ **Live updates** — Presence + synced game states  
-- 🎯 **Smart matching** — Advanced compatibility algorithm  
-- 🎪 **Expandable decks** — Multiple themed question sets  
-- 👥 **Emoji avatars** — Pick from 18 quirky emoji characters  
-- 🔄 **Rematch mode** — Beat your best score anytime  
+![CoupleQ Logo](./docs/screenshots/logo-placeholder.png){ width=300 }  
+_CoupleQ branding and logo preview_
 
 ---
 
-## 🛠️ Tech Stack  
+## ✨ Features That Shine
 
-- **Frontend** → Next.js 14, TypeScript, TailwindCSS, Framer Motion  
-- **Backend** → Convex (real-time DB + functions)  
-- **State Management** → Zustand  
-- **UI Components** → shadcn/ui + Radix primitives  
-- **Styling** → Tailwind + design tokens  
-- **Icons** → Lucide React  
-- **Animations** → Framer Motion transitions  
+- 🎮 **Real-time multiplayer** — Play instantly with your partner
+- 📱 **Mobile-first design** — TikTok-style vertical layout
+- 🎨 **Beautiful UI** — Smooth **Framer Motion** animations
+- 💕 **Compatibility scoring** — See your couple score (0–10)
+- 🖼️ **Image-based questions** — Fun, visual choices every round
+- ⚡ **Live updates** — Presence + synced game states
+- 🎯 **Smart matching** — Advanced compatibility algorithm
+- 🎪 **Expandable decks** — Multiple themed question sets
+- 👥 **Emoji avatars** — Pick from 18 quirky emoji characters
+- 🔄 **Rematch mode** — Beat your best score anytime
 
 ---
 
-## 🚀 Quick Start  
+## 🛠️ Tech Stack
 
-### ✅ Prerequisites  
-- Node.js 18+  
-- npm / pnpm  
-- Free Convex account → [convex.dev](https://convex.dev)  
+- **Frontend** → Next.js 14, TypeScript, TailwindCSS, Framer Motion
+- **Backend** → Convex (real-time DB + functions)
+- **State Management** → Zustand
+- **UI Components** → shadcn/ui + Radix primitives
+- **Styling** → Tailwind + design tokens
+- **Icons** → Lucide React
+- **Animations** → Framer Motion transitions
 
-### ⚡ Installation  
+---
+
+## 🚀 Quick Start
+
+### ✅ Prerequisites
+
+- Node.js 18+
+- npm / pnpm
+- Free Convex account → [convex.dev](https://convex.dev)
+
+### ⚡ Installation
 
 ```bash
 git clone <repository-url>
@@ -56,22 +57,23 @@ npm install
 pnpm install
 ```
 
-### ⚙️ Setup Convex  
+### ⚙️ Setup Convex
 
 ```bash
 npx convex dev
 ```
 
-This will:  
-- Create a project  
-- Deploy DB + functions  
-- Generate `.env.local` vars  
+This will:
+
+- Create a project
+- Deploy DB + functions
+- Generate `.env.local` vars
 
 ```bash
 echo "NEXT_PUBLIC_CONVEX_URL=your_convex_url_here" > .env.local
 ```
 
-### ▶️ Run locally  
+### ▶️ Run locally
 
 ```bash
 npm run dev
@@ -79,59 +81,59 @@ npm run dev
 pnpm dev
 ```
 
-Open 👉 [http://localhost:3000](http://localhost:3000)  
+Open 👉 [http://localhost:3000](http://localhost:3000)
 
-![Setup Screenshot](./docs/screenshots/setup-placeholder.png){ width=800 }  
-*Development setup preview*  
-
----
-
-## 🎮 Gameplay Walkthrough  
-
-### 1️⃣ Create or Join a Room  
-
-![Landing Page](./docs/screenshots/landing-page-placeholder.png){ width=900 }  
-*Landing page with avatar picker*  
-
-- Pick your **name + emoji avatar**  
-- Create room or enter 6-character code (e.g., `ABC123`)  
+![Setup Screenshot](./docs/screenshots/setup-placeholder.png){ width=400 }  
+_Development setup preview_
 
 ---
 
-### 2️⃣ Lobby Wait  
+## 🎮 Gameplay Walkthrough
 
-![Lobby Screen](./docs/screenshots/lobby-placeholder.png){ width=900 }  
-*Lobby screen showing room code + waiting state*  
+### 1️⃣ Create or Join a Room
 
-- Share code with partner  
-- Both mark **Ready** → Start game  
-- See partner’s online presence  
+![Landing Page](./docs/screenshots/landing-page-placeholder.png){ width=350 }  
+_Landing page with avatar picker_
 
----
-
-### 3️⃣ Answer Questions  
-
-![Game Screen](./docs/screenshots/game-screen-placeholder.png){ width=900 }  
-*Question screen with image options*  
-
-- Play **10 rounds** of visual Qs  
-- Choose from **4 SVG options** each round  
-- Lock answers → Reveal together 🎉  
+- Pick your **name + emoji avatar**
+- Create room or enter 6-character code (e.g., `ABC123`)
 
 ---
 
-### 4️⃣ Results & Scoring  
+### 2️⃣ Lobby Wait
 
-![Results Screen](./docs/screenshots/results-screen-placeholder.png){ width=900 }  
-*Results screen with compatibility score*  
+![Lobby Screen](./docs/screenshots/lobby-placeholder.png){ width=350 }  
+_Lobby screen showing room code + waiting state_
 
-- Get your **compatibility score** (0–10)  
-- Fun percentage + compatibility message  
-- Rematch & share results 💌  
+- Share code with partner
+- Both mark **Ready** → Start game
+- See partner’s online presence
 
 ---
 
-## 📁 Project Layout  
+### 3️⃣ Answer Questions
+
+![Game Screen](./docs/screenshots/game-screen-placeholder.png){ width=350 }  
+_Question screen with image options_
+
+- Play **10 rounds** of visual Qs
+- Choose from **4 SVG options** each round
+- Lock answers → Reveal together 🎉
+
+---
+
+### 4️⃣ Results & Scoring
+
+![Results Screen](./docs/screenshots/results-screen-placeholder.png){ width=350 }  
+_Results screen with compatibility score_
+
+- Get your **compatibility score** (0–10)
+- Fun percentage + compatibility message
+- Rematch & share results 💌
+
+---
+
+## 📁 Project Layout
 
 ```
 coupleQ/
@@ -147,51 +149,51 @@ coupleQ/
 
 ---
 
-## 🎯 Game Flow  
+## 🎯 Game Flow
 
-1. **Lobby Phase** → join, ready, start  
-2. **Game Phase** → 10 rounds: pick → lock → reveal  
-3. **Results Phase** → score, message, rematch  
-
----
-
-## 🎨 Customization  
-
-- Add new decks via JSON + SVGs  
-- Update registry in `data/decks/index.ts`  
-- Style via `tailwind.config.ts` + globals.css  
-- Animations handled by **Framer Motion**  
+1. **Lobby Phase** → join, ready, start
+2. **Game Phase** → 10 rounds: pick → lock → reveal
+3. **Results Phase** → score, message, rematch
 
 ---
 
-## 🚀 Deployment  
+## 🎨 Customization
 
-- **Frontend** → Vercel auto-deploy  
-- **Backend** → `npx convex deploy`  
-
----
-
-## 🤝 Contributing  
-
-- Fork → Branch → PR  
-- Follow **TypeScript + Tailwind standards**  
-- Add tests + screenshots for new features  
+- Add new decks via JSON + SVGs
+- Update registry in `data/decks/index.ts`
+- Style via `tailwind.config.ts` + globals.css
+- Animations handled by **Framer Motion**
 
 ---
 
-## 📄 License  
+## 🚀 Deployment
 
-MIT — [LICENSE](LICENSE)  
+- **Frontend** → Vercel auto-deploy
+- **Backend** → `npx convex deploy`
 
 ---
 
-## 🎉 Acknowledgments  
+## 🤝 Contributing
+
+- Fork → Branch → PR
+- Follow **TypeScript + Tailwind standards**
+- Add tests + screenshots for new features
+
+---
+
+## 📄 License
+
+MIT — [LICENSE](LICENSE)
+
+---
+
+## 🎉 Acknowledgments
 
 Built with ❤️ for couples everywhere.  
 Inspired by TikTok-style UIs.  
-Powered by **Convex**.  
+Powered by **Convex**.
 
 ---
 
 👉 **Ready to test your compatibility?**  
-Fire up **CoupleQ** and start playing today! 🎮💕  
+Fire up **CoupleQ** and start playing today! 🎮💕
