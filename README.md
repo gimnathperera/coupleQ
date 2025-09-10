@@ -5,13 +5,6 @@
 
 ---
 
-## 🎨 Branding & Logo
-
-![CoupleQ Logo](./docs/screenshots/logo-placeholder.png){ width=300 }  
-_CoupleQ branding and logo preview_
-
----
-
 ## ✨ Features That Shine
 
 - 🎮 **Real-time multiplayer** — Play instantly with your partner
@@ -83,16 +76,14 @@ pnpm dev
 
 Open 👉 [http://localhost:3000](http://localhost:3000)
 
-![Setup Screenshot](./docs/screenshots/setup-placeholder.png){ width=400 }  
-_Development setup preview_
-
 ---
 
 ## 🎮 Gameplay Walkthrough
 
 ### 1️⃣ Create or Join a Room
 
-![Landing Page](./docs/screenshots/landing-page-placeholder.png){ width=350 }  
+<img src="./docs/screenshots/landing-page-placeholder.png" alt="Landing Page" width="320" />
+
 _Landing page with avatar picker_
 
 - Pick your **name + emoji avatar**
@@ -102,7 +93,7 @@ _Landing page with avatar picker_
 
 ### 2️⃣ Lobby Wait
 
-![Lobby Screen](./docs/screenshots/lobby-placeholder.png){ width=350 }  
+<img src="./docs/screenshots/lobby-placeholder.png" alt="Landing Page" width="320" />
 _Lobby screen showing room code + waiting state_
 
 - Share code with partner
@@ -113,7 +104,7 @@ _Lobby screen showing room code + waiting state_
 
 ### 3️⃣ Answer Questions
 
-![Game Screen](./docs/screenshots/game-screen-placeholder.png){ width=350 }  
+<img src="./docs/screenshots/game-screen-placeholder.png" alt="Landing Page" width="320" />
 _Question screen with image options_
 
 - Play **10 rounds** of visual Qs
@@ -124,7 +115,7 @@ _Question screen with image options_
 
 ### 4️⃣ Results & Scoring
 
-![Results Screen](./docs/screenshots/results-screen-placeholder.png){ width=350 }  
+<img src="./docs/screenshots/results-screen-placeholder.png" alt="Landing Page" width="320" />
 _Results screen with compatibility score_
 
 - Get your **compatibility score** (0–10)
