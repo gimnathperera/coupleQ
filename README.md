@@ -84,7 +84,6 @@ Open 👉 [http://localhost:3000](http://localhost:3000)
 
 <img src="./docs/screenshots/landing-page-placeholder.png" alt="Landing Page" width="320" />
 
-_Landing page with avatar picker_
 
 - Pick your **name + emoji avatar**
 - Create room or enter 6-character code (e.g., `ABC123`)
@@ -94,7 +93,7 @@ _Landing page with avatar picker_
 ### 2️⃣ Lobby Wait
 
 <img src="./docs/screenshots/lobby-placeholder.png" alt="Landing Page" width="320" />
-_Lobby screen showing room code + waiting state_
+
 
 - Share code with partner
 - Both mark **Ready** → Start game
@@ -116,7 +115,7 @@ _Question screen with image options_
 ### 4️⃣ Results & Scoring
 
 <img src="./docs/screenshots/results-screen-placeholder.png" alt="Landing Page" width="320" />
-_Results screen with compatibility score_
+
 
 - Get your **compatibility score** (0–10)
 - Fun percentage + compatibility message
@@ -181,7 +180,6 @@ MIT — [LICENSE](LICENSE)
 ## 🎉 Acknowledgments
 
 Built with ❤️ for couples everywhere.  
-Inspired by TikTok-style UIs.  
 Powered by **Convex**.
 
 ---
