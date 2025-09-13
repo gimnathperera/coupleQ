@@ -36,7 +36,7 @@
 
 ### ✅ Prerequisites
 
-- Node.js 18+
+- Node.js 22+
 - npm / pnpm
 - Free Convex account → [convex.dev](https://convex.dev)
 
